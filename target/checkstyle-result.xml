@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\config\SecurityConfig.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\controller\AuthenticationController.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\controller\BookController.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\DemoApplication.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\BookDto.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\CreateBookRequestDto.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\UserRegistrationRequestDto.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\UserResponseDto.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\exception\GlobalExceptionHandler.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\exception\RegistrationException.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\mapper\BookMapper.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\mapper\UserMapper.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\model\Book.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\model\User.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\repository\BookRepository.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\repository\RoleRepository.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\repository\UserRepository.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\role\Role.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\role\RoleName.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\service\BookService.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\service\BookServiceImpl.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\service\CustomUserDetailsService.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\service\UserService.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\service\UserServiceImpl.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\validator\FieldMatch.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\validator\FieldMatchValidator.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\resources\application.properties">
+</file>
+</checkstyle>
