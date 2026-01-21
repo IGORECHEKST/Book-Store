@@ -10,6 +10,10 @@
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\BookDto.java">
 </file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\BookDtoWithoutCategoryIds.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\CategoryDto.java">
+</file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\CreateBookRequestDto.java">
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\UserLoginRequestDto.java">
@@ -26,13 +30,19 @@
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\mapper\BookMapper.java">
 </file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\mapper\CategoryMapper.java">
+</file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\mapper\UserMapper.java">
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\model\Book.java">
 </file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\model\Category.java">
+</file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\model\User.java">
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\repository\BookRepository.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\repository\CategoryRepository.java">
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\repository\RoleRepository.java">
 </file>

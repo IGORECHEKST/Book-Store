@@ -2,6 +2,7 @@ package com.example.demo.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
+import java.util.List;
 import lombok.Data;
 
 @Data
@@ -20,4 +21,6 @@ public class BookDto {
     private String description;
     @Schema(example = "http://example.com/cover.jpg")
     private String coverImage;
+
+    private List<Long> categoryIds;
 }

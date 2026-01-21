@@ -2,8 +2,10 @@ package com.example.demo.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.util.List;
 import lombok.Data;
 
 @Data
@@ -26,4 +28,8 @@ public class CreateBookRequestDto {
     private String description;
 
     private String coverImage;
+
+    @NotEmpty(message = "At least one category id must be provided")
+    private List<Long> categoryIds;
+
 }

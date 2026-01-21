@@ -1,21 +1,26 @@
-#Wed Jan 21 06:42:44 EET 2026
+#Wed Jan 21 19:50:17 EET 2026
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\DemoApplication.java=1767423493852
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\config\\SecurityConfig.java=1768129897657
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\controller\\AuthenticationController.java=1768130343724
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\controller\\BookController.java=1767634252606
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\BookDto.java=1766508995701
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\CreateBookRequestDto.java=1767424373918
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\BookDto.java=1769017806260
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\BookDtoWithoutCategoryIds.java=1769017497339
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\CategoryDto.java=1769017484639
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\CreateBookRequestDto.java=1769017420507
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserLoginRequestDto.java=1768130134991
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserLoginResponseDto.java=1768130175268
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserRegistrationRequestDto.java=1767358397597
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserResponseDto.java=1766661778120
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\exception\\GlobalExceptionHandler.java=1767422973557
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\exception\\RegistrationException.java=1767423493841
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\mapper\\BookMapper.java=1767423493846
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\mapper\\BookMapper.java=1769017685344
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\mapper\\CategoryMapper.java=1769017651062
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\mapper\\UserMapper.java=1766662923731
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\model\\Book.java=1767423672750
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\model\\Book.java=1769017772010
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\model\\Category.java=1769016696200
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\model\\User.java=1768130833244
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\BookRepository.java=1767358993444
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\BookRepository.java=1769016970689
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\CategoryRepository.java=1769016907468
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\RoleRepository.java=1767636298751
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\UserRepository.java=1767423798613
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\role\\Role.java=1767636337353
