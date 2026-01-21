@@ -12,6 +12,10 @@
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\CreateBookRequestDto.java">
 </file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\UserLoginRequestDto.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\UserLoginResponseDto.java">
+</file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\UserRegistrationRequestDto.java">
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\dto\UserResponseDto.java">
@@ -37,6 +41,12 @@
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\role\Role.java">
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\role\RoleName.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\security\JwtAuthenticationFilter.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\security\JwtUtil.java">
+</file>
+<file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\service\AuthenticationService.java">
 </file>
 <file name="C:\Users\login\IdeaProjects\Book-Store\src\main\java\com\example\demo\service\BookService.java">
 </file>

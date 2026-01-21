@@ -9,9 +9,11 @@ com\example\demo\repository\BookRepository.class
 com\example\demo\service\UserService.class
 com\example\demo\service\BookService.class
 com\example\demo\repository\UserRepository.class
+com\example\demo\service\AuthenticationService.class
 com\example\demo\controller\BookController.class
 com\example\demo\dto\UserResponseDto.class
 com\example\demo\exception\GlobalExceptionHandler.class
+com\example\demo\dto\UserLoginRequestDto.class
 com\example\demo\validator\FieldMatchValidator.class
 com\example\demo\dto\CreateBookRequestDto.class
 com\example\demo\repository\RoleRepository.class
@@ -22,7 +24,10 @@ com\example\demo\service\BookServiceImpl.class
 com\example\demo\mapper\BookMapper.class
 com\example\demo\config\SecurityConfig.class
 com\example\demo\dto\BookDto.class
+com\example\demo\security\JwtAuthenticationFilter.class
 com\example\demo\validator\FieldMatch.class
 com\example\demo\role\Role.class
+com\example\demo\dto\UserLoginResponseDto.class
 com\example\demo\mapper\UserMapper.class
 com\example\demo\controller\AuthenticationController.class
+com\example\demo\security\JwtUtil.class

@@ -1,10 +1,12 @@
-#Wed Jan 21 06:38:29 EET 2026
+#Wed Jan 21 06:42:44 EET 2026
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\DemoApplication.java=1767423493852
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\config\\SecurityConfig.java=1767636264404
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\controller\\AuthenticationController.java=1767422973597
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\config\\SecurityConfig.java=1768129897657
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\controller\\AuthenticationController.java=1768130343724
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\controller\\BookController.java=1767634252606
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\BookDto.java=1766508995701
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\CreateBookRequestDto.java=1767424373918
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserLoginRequestDto.java=1768130134991
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserLoginResponseDto.java=1768130175268
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserRegistrationRequestDto.java=1767358397597
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\dto\\UserResponseDto.java=1766661778120
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\exception\\GlobalExceptionHandler.java=1767422973557
@@ -12,12 +14,15 @@ C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\mapper\\BookMapper.java=1767423493846
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\mapper\\UserMapper.java=1766662923731
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\model\\Book.java=1767423672750
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\model\\User.java=1768970295711
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\model\\User.java=1768130833244
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\BookRepository.java=1767358993444
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\RoleRepository.java=1767636298751
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\repository\\UserRepository.java=1767423798613
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\role\\Role.java=1767636337353
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\role\\RoleName.java=1767633324672
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\security\\JwtAuthenticationFilter.java=1768230495945
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\security\\JwtUtil.java=1768130640427
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\service\\AuthenticationService.java=1768130194613
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\service\\BookService.java=1767423859325
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\service\\BookServiceImpl.java=1766162130204
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\service\\CustomUserDetailsService.java=1767636038999
@@ -25,5 +30,5 @@ C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\service\\UserServiceImpl.java=1767423562237
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\validator\\FieldMatch.java=1767423562226
 C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\java\\com\\example\\demo\\validator\\FieldMatchValidator.java=1767358397590
-C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\resources\\application.properties=1767423493863
+C\:\\Users\\login\\IdeaProjects\\Book-Store\\src\\main\\resources\\application.properties=1768129189950
 configuration*?=DEC88A4FDB71429CEDA7D1B46C3C8A5DD50522E
