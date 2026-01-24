@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-import com.example.demo.role.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
