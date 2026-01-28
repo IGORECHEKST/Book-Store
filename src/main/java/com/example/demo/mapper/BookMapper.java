@@ -1,6 +1,7 @@
 package com.example.demo.mapper;
 
 import com.example.demo.dto.BookDto;
+import com.example.demo.dto.BookDtoWithoutCategoryIds;
 import com.example.demo.dto.CreateBookRequestDto;
 import com.example.demo.model.Book;
 import org.mapstruct.InjectionStrategy;
@@ -15,4 +16,6 @@ public interface BookMapper {
     Book toEntity(CreateBookRequestDto bookDto);
 
     void updateBook(CreateBookRequestDto bookDto, @MappingTarget Book book);
+
+    BookDtoWithoutCategoryIds toDtoWithoutCategories(Book book);
 }
