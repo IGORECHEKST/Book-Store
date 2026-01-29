@@ -5,11 +5,10 @@ import com.example.demo.dto.UserResponseDto;
 import com.example.demo.exception.RegistrationException;
 import com.example.demo.mapper.UserMapper;
 import com.example.demo.model.Role;
-import com.example.demo.model.ShoppingCart;
 import com.example.demo.model.User;
-import com.example.demo.repository.ShoppingCartRepository;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.RoleService;
+import com.example.demo.service.ShoppingCartService;
 import com.example.demo.service.UserService;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +24,7 @@ public class UserServiceImpl implements UserService {
     private final RoleService roleService;
     private final PasswordEncoder passwordEncoder;
     private final UserMapper userMapper;
-    private final ShoppingCartRepository shoppingCartRepository;
+    private final ShoppingCartService shoppingCartService;
 
     @Override
     public UserResponseDto register(UserRegistrationRequestDto requestDto)
@@ -41,16 +40,9 @@ public class UserServiceImpl implements UserService {
         Role userRole = roleService.getRoleByRoleName(Role.RoleName.ROLE_USER);
         user.setRoles(Set.of(userRole));
 
-        User savedUser = userRepository.save(user);
-
-        createShoppingCartForUser(savedUser);
-
-        return userMapper.toDto(savedUser);
-    }
-
-    private void createShoppingCartForUser(User user) {
-        ShoppingCart shoppingCart = new ShoppingCart();
-        shoppingCart.setUser(user);
-        shoppingCartRepository.save(shoppingCart);
+        userRepository.save(user);
+        shoppingCartService.registerNewShoppingCart(user);
+        return userMapper.toDto(user);
     }
 }
+
