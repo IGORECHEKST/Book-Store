@@ -8,6 +8,7 @@ import com.example.demo.model.Role;
 import com.example.demo.model.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.RoleService;
+import com.example.demo.service.ShoppingCartService;
 import com.example.demo.service.UserService;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ public class UserServiceImpl implements UserService {
     private final RoleService roleService;
     private final PasswordEncoder passwordEncoder;
     private final UserMapper userMapper;
+    private final ShoppingCartService shoppingCartService;
 
     @Override
     public UserResponseDto register(UserRegistrationRequestDto requestDto)
@@ -38,6 +40,9 @@ public class UserServiceImpl implements UserService {
         Role userRole = roleService.getRoleByRoleName(Role.RoleName.ROLE_USER);
         user.setRoles(Set.of(userRole));
 
-        return userMapper.toDto(userRepository.save(user));
+        userRepository.save(user);
+        shoppingCartService.registerNewShoppingCart(user);
+        return userMapper.toDto(user);
     }
 }
+
