@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.dto.CartItemUpdateDto;
 import com.example.demo.dto.CreateCartItemRequestDto;
 import com.example.demo.dto.ShoppingCartDto;
+import com.example.demo.model.ShoppingCart;
 import com.example.demo.model.User;
 
 public interface ShoppingCartService {
@@ -16,4 +17,5 @@ public interface ShoppingCartService {
 
     void registerNewShoppingCart(User user);
 
+    void clear(ShoppingCart shoppingCart);
 }
