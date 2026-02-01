@@ -7,11 +7,9 @@ import com.example.demo.dto.UpdateOrderStatusRequestDto;
 import com.example.demo.exception.EntityNotFoundException;
 import com.example.demo.mapper.OrderItemMapper;
 import com.example.demo.mapper.OrderMapper;
-import com.example.demo.model.CartItem;
 import com.example.demo.model.Order;
 import com.example.demo.model.OrderItem;
 import com.example.demo.model.ShoppingCart;
-import com.example.demo.model.Status;
 import com.example.demo.model.User;
 import com.example.demo.repository.OrderItemRepository;
 import com.example.demo.repository.OrderRepository;
@@ -19,7 +17,6 @@ import com.example.demo.repository.ShoppingCartRepository;
 import com.example.demo.service.OrderService;
 import com.example.demo.service.ShoppingCartService;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -40,77 +37,81 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     @Transactional
-    public OrderResponseDto placeOrder(User user, CreateOrderRequestDto requestDto) {
-        ShoppingCart cart = shoppingCartRepository.findByUserId(user.getId())
-                .orElseThrow(() -> new EntityNotFoundException("Can't find shopping cart for user "
-                        + user.getId()));
-
+    public OrderResponseDto placeOrder(User user,
+                                       CreateOrderRequestDto requestDto) {
+        ShoppingCart cart = getShoppingCartByUserId(user.getId());
         if (cart.getCartItems().isEmpty()) {
             throw new RuntimeException("Can't place an order with an empty cart");
         }
 
-        Order order = new Order();
+        Order order = orderMapper.toModel(requestDto);
         order.setUser(user);
-        order.setStatus(Status.PENDING);
-        order.setOrderDate(LocalDateTime.now());
-        order.setShippingAddress(requestDto.getShippingAddress());
-
-        BigDecimal total = cart.getCartItems().stream()
-                .map(item -> item.getBook()
-                        .getPrice()
-                        .multiply(BigDecimal.valueOf(item.getQuantity())))
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
-        order.setTotal(total);
-
-        Set<OrderItem> orderItems = cart.getCartItems().stream()
-                .map(cartItem -> convertToOrderItem(cartItem, order))
-                .collect(Collectors.toSet());
-        order.setOrderItems(orderItems);
+        order.setTotal(calculateTotal(cart));
+        order.setOrderItems(createOrderItems(cart, order));
 
         Order savedOrder = orderRepository.save(order);
-
         shoppingCartService.clear(cart);
 
         return orderMapper.toDto(savedOrder);
     }
 
     @Override
-    public List<OrderResponseDto> getAll(User user, Pageable pageable) {
+    @Transactional(readOnly = true)
+    public List<OrderResponseDto> getAll(User user,
+                                         Pageable pageable) {
         return orderRepository.findAllByUserId(user.getId(), pageable).stream()
                 .map(orderMapper::toDto)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
     @Transactional
     public OrderResponseDto updateStatus(Long id, UpdateOrderStatusRequestDto requestDto) {
         Order order = orderRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Can't find order by id " + id));
-        order.setStatus(Status.valueOf(requestDto.getStatus()));
+                .orElseThrow(() -> new EntityNotFoundException("Can't find order by id "
+                        + id));
+        order.setStatus(requestDto.getStatus());
         return orderMapper.toDto(orderRepository.save(order));
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<OrderItemResponseDto> getOrderItems(Long orderId) {
         return orderItemRepository.findAllByOrderId(orderId).stream()
                 .map(orderItemMapper::toDto)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public OrderItemResponseDto getOrderItem(Long orderId, Long itemId) {
         return orderItemRepository.findByIdAndOrderId(itemId, orderId)
                 .map(orderItemMapper::toDto)
-                .orElseThrow(() -> new EntityNotFoundException("Can't find order item " + itemId
+                .orElseThrow(() -> new EntityNotFoundException("Can't find order item "
+                        + itemId
                         + " for order " + orderId));
     }
 
-    private OrderItem convertToOrderItem(CartItem cartItem, Order order) {
-        OrderItem orderItem = new OrderItem();
-        orderItem.setOrder(order);
-        orderItem.setBook(cartItem.getBook());
-        orderItem.setQuantity(cartItem.getQuantity());
-        orderItem.setPrice(cartItem.getBook().getPrice());
-        return orderItem;
+    private ShoppingCart getShoppingCartByUserId(Long userId) {
+        return shoppingCartRepository.findByUserId(userId)
+                .orElseThrow(() -> new EntityNotFoundException("Can't find shopping cart for user "
+                        + userId));
+    }
+
+    private BigDecimal calculateTotal(ShoppingCart cart) {
+        return cart.getCartItems().stream()
+                .map(item -> item.getBook().getPrice()
+                        .multiply(BigDecimal.valueOf(item.getQuantity())))
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    private Set<OrderItem> createOrderItems(ShoppingCart cart, Order order) {
+        return cart.getCartItems().stream()
+                .map(cartItem -> {
+                    OrderItem orderItem = orderItemMapper.toModel(cartItem);
+                    orderItem.setOrder(order);
+                    return orderItem;
+                })
+                .collect(Collectors.toSet());
     }
 }
