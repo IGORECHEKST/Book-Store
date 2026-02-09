@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.example.demo.model.Book;
 import org.junit.jupiter.api.DisplayName;
@@ -38,9 +39,10 @@ class BookRepositoryTest {
         Page<Book> result = bookRepository.findAllByCategoryId(categoryId, pageable);
 
         // Then
-        assertThat(result.getContent()).isNotEmpty();
-        assertThat(result.getTotalElements()).isEqualTo(1);
-        assertThat(result.getContent().get(0).getTitle()).isEqualTo("The Hobbit");
+        assertTrue(result.getContent().size() > 0, "Список не має бути порожнім");
+        assertEquals(1, result.getTotalElements(), "Кількість елементів має бути 1");
+        assertEquals("The Hobbit", result.getContent().get(0).getTitle(),
+                "Назва книги неспівпадає");
     }
 
     @Test
@@ -54,6 +56,7 @@ class BookRepositoryTest {
         Page<Book> result = bookRepository.findAllByCategoryId(nonExistingId, pageable);
 
         // Then
-        assertThat(result.getContent()).isEmpty();
+        assertEquals(0, result.getContent().size(),
+                "Результат повинен бути порожнім для невірного ID");
     }
 }

@@ -1,6 +1,9 @@
 package com.example.demo.repository;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.example.demo.model.Category;
 import java.util.Optional;
 import org.junit.jupiter.api.DisplayName;
@@ -28,9 +31,11 @@ class CategoryRepositoryTest {
         Category savedCategory = categoryRepository.save(category);
 
         // Then
-        assertThat(savedCategory).isNotNull();
-        assertThat(savedCategory.getId()).isGreaterThan(0L);
-        assertThat(savedCategory.getName()).isEqualTo("Fiction");
+        assertNotNull(savedCategory, "Збережена категорія не має бути null");
+        assertNotNull(savedCategory.getId(), "ID має бути згенерований");
+        assertTrue(savedCategory.getId() > 0, "ID має бути більше 0");
+        assertEquals("Fiction", savedCategory.getName(),
+                "Назва категорії не співпадає");
     }
 
     @Test
@@ -45,7 +50,8 @@ class CategoryRepositoryTest {
         Optional<Category> found = categoryRepository.findById(saved.getId());
 
         // Then
-        assertThat(found).isPresent();
-        assertThat(found.get().getName()).isEqualTo("Non-Fiction");
+        assertTrue(found.isPresent(), "Категорія має бути знайдена");
+        assertEquals("Non-Fiction", found.get().getName(),
+                "Назва знайденої категорії не співпадає");
     }
 }
